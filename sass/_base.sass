@@ -1,16 +1,30 @@
 @import "vergo/base"
 @import "variables"
 
-$border-line: 1px solid rgba(0, 0, 0, 0.09)
+@font-face
+  font-family: 'CoCo'
+  src: url('../fonts/coco.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
 
-=borderBottom()
-  border-bottom: 1px solid rgba(0, 0, 0, 0.09)
++keyframes(fadeOn)
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
++keyframes(fadeOut)
+  0%
+    opacity: 1
+  100%
+    opacity: 0
 
 +keyframes(fadeOnFontHover)
   0%
     background-color: transparent
   100%
     background-color: $base-color-hover
+
 +keyframes(fadeOutFontHover)
   0%
     background-color: $base-color-hover
@@ -26,20 +40,13 @@ $border-line: 1px solid rgba(0, 0, 0, 0.09)
 =addFontHoverAnimation($animation : fadeOnFontHover, $time: 0.4)
   &:hover
     +animation(#{$animation} #{$time}s)
-.logo
-  background-image: url("../images/logo.png")
-  +img-responsive()
-  width: 116px
-  height: 40px
-  float: left
-  background-size: cover
 
-.container
-  max-width: $width
-  width: 100%
-  padding: 0
-  margin-bottom: 40px
-  font-size: $base-font-size
+
+.logo
+  text-align: center
+  font-family: 'CoCo'
+  color: black
+  font-size: 36px
 
 .no_padding.col-lg-1, .no_padding.col-lg-10, .no_padding.col-lg-11, .no_padding.col-lg-12, .no_padding.col-lg-2,
 .no_padding.col-lg-3, .no_padding.col-lg-4, .no_padding.col-lg-5, .no_padding.col-lg-6, .no_padding.col-lg-7,
@@ -96,38 +103,13 @@ a:hover, a.active, a:focus
 
 .listen-btm
   @extend .m-btn
+
 .add-btm
   @extend .m-btn
   padding-top: 8px
   padding-bottom: 8px
   margin-left: 10px
   font-size: 16px
-
-=line($line-height)
-  &
-    border-bottom: $line-height solid $base-color-white
-    &:hover
-      .line:after
-        display: inline-block
-    .line
-      background-color: $base-color-hover
-      height: $line-height
-      position: absolute
-      z-index: 6
-      width: 45%
-      bottom: -$line-height
-      cursor: pointer
-      &:after
-        display: none
-        position: absolute
-        top: -5px
-        right: -5px
-        color: $base-color-hover
-        font: normal normal normal 14px/1 'Material-Design-Iconic-Font'
-        content: "\f26d"
-        text-rendering: auto
-        -webkit-font-smoothing: antialiased
-        -moz-osx-font-smoothing: grayscale
 
 =shadow-base()
   +box-shadow(0px 5px 10px 0px rgba(33,33,33,0.25))
@@ -144,25 +126,3 @@ a:hover, a.active, a:focus
   &:hover
     color: $base-color-hover
     +addFontHoverAnimation(fadeOnColorHover)
-
-.icon-repeat
-  &:before
-    content: '\f3b2'
-.icon-prev
-  &:before
-    content: '\f3a0'
-.icon-pause
-  &:before
-    content: '\f3a7'
-.icon-pause-circle
-  &:before
-    content: '\f3a9'
-.icon-next
-  &:before
-    content: '\f39f'
-.icon-shuffle
-  &:before
-    content: '\f3b3'
-.icon-add
-  &:before
-    content: '\f278'

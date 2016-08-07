@@ -1,5 +1,6 @@
 @import "variables"
 @import "mixins"
+@import "grid"
 
 html
   font-family: sans-serif
@@ -36,21 +37,3 @@ hr
   height: 0
   -webkit-box-sizing: content-box
   box-sizing: content-box
-
-.container
-  padding-right: .9375rem
-  padding-left: .9375rem
-  margin-right: auto
-  margin-left: auto
-  @media (min-width: 544px)
-    max-width: 576px
-  @media (min-width: 768px)
-    max-width: 720px
-  @media (min-width: 992px)
-    max-width: 940px
-  @media (min-width: 1200px)
-    max-width: 1140px
-  &::after
-    display: table
-    clear: both
-    content: ""
