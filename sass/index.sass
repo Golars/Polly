@@ -80,9 +80,27 @@ body
       +animation(fadeOn 1s)
       display: block
 
++keyframes(fadePictures)
+  0%
+    background-color: transparent
+  100%
+    background-color: #fff9c4
+
++keyframes(fadePicturesOut)
+  0%
+    background-color: #fff9c4
+  100%
+    background-color: transparent
+
+
 #pictures
   .el
+    &:hover
+      .body
+        background-color: #fff9c4
+        +animation(fadePictures .5s)
     .body
+      +animation(fadePicturesOut .5s)
       font-family: "CoCo"
       text-align: center
       padding: 50px 25px

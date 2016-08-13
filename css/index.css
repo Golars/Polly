@@ -1000,7 +1000,57 @@ body {
     animation: fadeOn 1s;
     display: block; }
 
+@-webkit-keyframes fadePictures {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: #fff9c4; } }
+@-moz-keyframes fadePictures {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: #fff9c4; } }
+@-o-keyframes fadePictures {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: #fff9c4; } }
+@keyframes fadePictures {
+  0% {
+    background-color: transparent; }
+  100% {
+    background-color: #fff9c4; } }
+@-webkit-keyframes fadePicturesOut {
+  0% {
+    background-color: #fff9c4; }
+  100% {
+    background-color: transparent; } }
+@-moz-keyframes fadePicturesOut {
+  0% {
+    background-color: #fff9c4; }
+  100% {
+    background-color: transparent; } }
+@-o-keyframes fadePicturesOut {
+  0% {
+    background-color: #fff9c4; }
+  100% {
+    background-color: transparent; } }
+@keyframes fadePicturesOut {
+  0% {
+    background-color: #fff9c4; }
+  100% {
+    background-color: transparent; } }
+#pictures .el:hover .body {
+  background-color: #fff9c4;
+  -webkit-animation: fadePictures 0.5s;
+  -o-animation: fadePictures 0.5s;
+  -moz-animation: fadePictures 0.5s;
+  animation: fadePictures 0.5s; }
 #pictures .el .body {
+  -webkit-animation: fadePicturesOut 0.5s;
+  -o-animation: fadePicturesOut 0.5s;
+  -moz-animation: fadePicturesOut 0.5s;
+  animation: fadePicturesOut 0.5s;
   font-family: "CoCo";
   text-align: center;
   padding: 50px 25px; }
