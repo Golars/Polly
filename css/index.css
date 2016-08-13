@@ -1000,4 +1000,17 @@ body {
     animation: fadeOn 1s;
     display: block; }
 
+#pictures .el .body {
+  font-family: "CoCo";
+  text-align: center;
+  padding: 50px 25px; }
+  #pictures .el .body .title {
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px; }
+  #pictures .el .body .image {
+    overflow: hidden; }
+    #pictures .el .body .image img {
+      width: 100%; }
+
 /*# sourceMappingURL=index.css.map */
