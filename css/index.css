@@ -1067,7 +1067,7 @@ body {
       width: 100%; }
 
 .info-text {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 18px;
   padding: 20px 0;
   text-align: center;
