@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,cyrillic-ext");
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -703,6 +703,9 @@ hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
+body {
+  font-family: "Open Sans", sans-serif; }
+
 @font-face {
   font-family: "CoCo";
   src: url("../fonts/coco.ttf") format("truetype");
@@ -1054,7 +1057,7 @@ body {
   font-family: "CoCo";
   text-align: center;
   padding: 50px 25px; }
-  #pictures .el .body .title {
+  #pictures .el .body .title, #pictures .footer .el .body .time, .footer #pictures .el .body .time {
     padding-bottom: 20px;
     font-weight: 500;
     font-size: 18px; }
@@ -1062,5 +1065,32 @@ body {
     overflow: hidden; }
     #pictures .el .body .image img {
       width: 100%; }
+
+.info-text {
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: rgba(187, 222, 251, 0.25); }
+  .info-text .blue {
+    color: #0288d1; }
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 0 40px;
+  font-size: 12px;
+  color: #bdbdbd; }
+  .footer .el {
+    display: table;
+    margin: 0 auto; }
+    .footer .el div {
+      margin: 10px 0; }
+    .footer .el .title, .footer .el .time {
+      font-weight: 700;
+      color: black; }
+    .footer .el .time {
+      margin-top: 0; }
+    .footer .el .title, .footer .el .time {
+      margin-bottom: 30px; }
 
 /*# sourceMappingURL=index.css.map */
